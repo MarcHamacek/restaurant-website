@@ -1,0 +1,281 @@
+@charset "UTF-8";
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #579c87;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
+/*Début du Code CSS*/
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #579c87;
+}
+
+.ohmyfood {
+  padding: 24px;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 78px;
+}
+
+.resto {
+  height: 700px;
+  width: 500px;
+  box-shadow: 0px 0px 14px 8px lightgrey;
+  cursor: pointer;
+}
+
+.resto_note {
+  background-color: #fcdfdb;
+}
+
+.resto_chic {
+  background-color: #fff5fe;
+}
+
+.resto_delice {
+  background-color: #f9f9f9;
+}
+
+.resto_palette {
+  background-color: #fdfffd;
+}
+
+.menu {
+  text-align: center;
+}
+
+.prochainement {
+  text-align: center;
+  margin: 78px auto;
+}
+
+.prochainement_btn {
+  font-size: 30px;
+  color: #fdcb46;
+  background-color: #579c87;
+  border: 1px solid #579c87;
+  border-radius: 30px;
+  padding: 16px 40px;
+}
+
+.circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fdcb46;
+  border-radius: 50%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #579c87;
+  font-size: 24px;
+  padding: 16px 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer_element {
+  color: #fdcb46;
+}
+
+.footer_mentions {
+  margin-left: 20px;
+}
+
+.footer_contact {
+  margin-right: 20px;
+}
+
+/**/
+.titre_resto {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.menu_detail {
+  line-height: 250%;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.titre_resto,
+.header_resto,
+.mets,
+.titre_fin {
+  text-align: center;
+}
+
+.titre_resto {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.header_resto {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*CSS Page 1*/
+.menu_1_detail {
+  background-color: #fcdfdb;
+}
+
+.mets_1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 26px;
+}
+
+.plat_1, .prix_1 {
+  font-size: 28px;
+}
+
+.prix_1 {
+  font-weight: bold;
+}
+
+.titre_fin {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 40px auto;
+}
+
+/*CSS Page 2*/
+.menu_2_detail {
+  background-color: #fff5fe;
+  padding-bottom: 100px;
+}
+
+.mets_entree_2,
+.mets_pp_2,
+.mets_dessert_2 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.liste_entree_2,
+.liste_plat_2,
+.liste_dessert_2 {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.plat_2,
+.prix_2 {
+  font-size: 26px;
+}
+
+.mets_entree_2 {
+  color: #cb8029;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.liste_entree_2 {
+  color: #d08c3e;
+}
+
+.mets_pp_2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.liste_plat_2 {
+  color: #b986ae;
+}
+
+.mets_dessert_2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/*CSS Page 3*/
+.menu_3_detail {
+  background-color: #edefef;
+}
+
+/*CSS Page 4*/
+.menu_4_detail {
+  background-color: #fdfffd;
+}
