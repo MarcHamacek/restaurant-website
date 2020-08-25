@@ -215,59 +215,9 @@ li {
   font-weight: bold;
 }
 
-.titre_fin {
-  font-size: 44px;
-  font-weight: bold;
-  margin: 40px auto;
-}
-
 /*CSS Page 2*/
 .menu_2_detail {
   background-color: #fff5fe;
-  padding-bottom: 100px;
-}
-
-.mets_entree_2,
-.mets_pp_2,
-.mets_dessert_2 {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.liste_entree_2,
-.liste_plat_2,
-.liste_dessert_2 {
-  margin-left: 70px;
-  margin-right: 70px;
-}
-
-.plat_2,
-.prix_2 {
-  font-size: 26px;
-}
-
-.mets_entree_2 {
-  color: #cb8029;
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
-
-.liste_entree_2 {
-  color: #d08c3e;
-}
-
-.mets_pp_2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.liste_plat_2 {
-  color: #b986ae;
-}
-
-.mets_dessert_2 {
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
 
 /*CSS Page 3*/
