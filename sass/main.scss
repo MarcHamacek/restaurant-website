@@ -83,6 +83,9 @@ table {
     width: 500px;
     box-shadow: $menu-box-shadow;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .resto_note {
@@ -102,8 +105,53 @@ table {
 }
 
 .menu {
+    font-size: 40px;
     text-align: center;
+    line-height: 300%;
 }
+
+/*CSS Menu 1*/
+
+/*CSS Menu 2*/
+
+.menu_chic_francais {
+}
+
+.resto_2 {
+    background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.menu_chic {
+    text-transform: uppercase;
+}
+
+/*CSS Menu 3*/
+
+.resto_3 {
+    background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.menu_delice {
+    color: #2394fa;
+}
+
+/*CSS Menu 4*/
+
+.resto_4 {
+    background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.menu_palette {
+    color: #72bf56;
+}
+
+/*CSS Bouton Next*/
 
 .prochainement {
     text-align: center;
@@ -183,7 +231,7 @@ table {
 .header_resto {
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -226,6 +274,13 @@ li {
     padding-bottom: 100px;
 }
 
+.header_chic_francais {
+    background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-top: 100px;
+}
+
 .mets_entree_2,
 .mets_pp_2,
 .mets_dessert_2 {
@@ -256,6 +311,7 @@ li {
 }
 
 .mets_pp_2 {
+    color: #a96e9d;
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -265,9 +321,18 @@ li {
 }
 
 .mets_dessert_2 {
+    color: #7251cd;
     margin-top: 50px;
     margin-bottom: 30px;
 }
+
+.liste_dessert_2 {
+    color: #9c81db;
+}
+
+/*background: -webkit-linear-gradient(45deg, #af4261, #f3ec78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent*/
 
 /*CSS Page 3*/
 
@@ -275,8 +340,20 @@ li {
     background-color: #edefef;
 }
 
+.header_delice {
+    background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 /*CSS Page 4*/
 
 .menu_4_detail {
     background-color: #fdfffd;
+}
+
+.header_palette {
+    background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
