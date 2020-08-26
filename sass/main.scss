@@ -55,16 +55,21 @@ table {
 
 /*Début du Code CSS*/
 
+/*CSS Index*/
+
+/*Header*/
+
 .header {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: $color-primary;
+    &__ohmyfood {
+        padding: 24px;
+    }
 }
 
-.ohmyfood {
-    padding: 24px;
-}
+/*Body*/
 
 .container {
     width: 1170px;
@@ -177,20 +182,19 @@ a {
     color: #72bf56;
 }
 
-/*CSS Bouton Next*/
+/*CSS Bouton Prochainement*/
 
 .prochainement {
     text-align: center;
     margin: 78px auto;
-}
-
-.prochainement_btn {
-    font-size: 30px;
-    color: $color-secondary;
-    background-color: $color-primary;
-    border: 1px solid $color-primary;
-    border-radius: 30px;
-    padding: 16px 40px;
+    &__btn {
+        font-size: 30px;
+        color: $color-secondary;
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        border-radius: 30px;
+        padding: 16px 40px;
+    }
 }
 
 .circle {
@@ -212,13 +216,19 @@ a {
     padding: 16px 0;
     position: fixed;
     bottom: 0;
-}
-
-.footer_element {
-    color: $color-secondary;
-    transition: transform 400ms;
-    &:hover {
-        animation: wiggle 600ms ease-out;
+    &__mentions {
+        color: $color-secondary;
+        margin-left: 20px;
+        &:hover {
+            animation: wiggle 500ms ease-out;
+        }
+    }
+    &__contact {
+        color: $color-secondary;
+        margin-right: 20px;
+        &:hover {
+            animation: wiggle 500ms ease-out;
+        }
     }
 }
 
@@ -246,14 +256,6 @@ a {
     100% {
         transform: translateX(0);
     }
-}
-
-.footer_mentions {
-    margin-left: 20px;
-}
-
-.footer_contact {
-    margin-right: 20px;
 }
 
 /**/

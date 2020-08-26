@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*Couleurs Note Enchantée*/
+/*Couleur Chic à la française*/
+/*Couleurs Délice Papilles*/
+/*Couleur Palette Goût*/
 .header {
   display: flex;
   justify-content: center;
@@ -61,17 +65,19 @@ table {
 
 /*# sourceMappingURL=style.css.map */
 /*Début du Code CSS*/
+/*CSS Index*/
+/*Header*/
 .header {
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: #579c87;
 }
-
-.ohmyfood {
+.header__ohmyfood {
   padding: 24px;
 }
 
+/*Body*/
 .container {
   width: 1170px;
   margin: 0 auto;
@@ -177,13 +183,12 @@ a:visited {
   color: #72bf56;
 }
 
-/*CSS Bouton Next*/
+/*CSS Bouton Prochainement*/
 .prochainement {
   text-align: center;
   margin: 78px auto;
 }
-
-.prochainement_btn {
+.prochainement__btn {
   font-size: 30px;
   color: #fdcb46;
   background-color: #579c87;
@@ -211,13 +216,19 @@ a:visited {
   position: fixed;
   bottom: 0;
 }
-
-.footer_element {
+.footer__mentions {
   color: #fdcb46;
-  transition: transform 400ms;
+  margin-left: 20px;
 }
-.footer_element:hover {
-  animation: wiggle 600ms ease-out;
+.footer__mentions:hover {
+  animation: wiggle 500ms ease-out;
+}
+.footer__contact {
+  color: #fdcb46;
+  margin-right: 20px;
+}
+.footer__contact:hover {
+  animation: wiggle 500ms ease-out;
 }
 
 @keyframes wiggle {
@@ -240,14 +251,6 @@ a:visited {
     transform: translateX(0);
   }
 }
-.footer_mentions {
-  margin-left: 20px;
-}
-
-.footer_contact {
-  margin-right: 20px;
-}
-
 /**/
 .titre_resto {
   font-size: 40px;
