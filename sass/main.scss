@@ -71,6 +71,13 @@ table {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    &:visited {
+        text-decoration: none;
+    }
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -85,7 +92,18 @@ table {
     cursor: pointer;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
+    transform: scale(1);
+    transition-duration: 400ms;
+    &:hover {
+        transform: scale(1.4);
+    }
+}
+
+.menu {
+    font-size: 40px;
+    text-align: center;
 }
 
 .resto_note {
@@ -104,18 +122,21 @@ table {
     background-color: #fdfffd;
 }
 
-.menu {
-    font-size: 40px;
-    text-align: center;
-    line-height: 300%;
-}
+
 
 /*CSS Menu 1*/
 
-/*CSS Menu 2*/
-
-.menu_chic_francais {
+.resto_1 {
+    color: black;
 }
+
+.menu_note {
+    color: black;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+/*CSS Menu 2*/
 
 .resto_2 {
     background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
@@ -137,6 +158,11 @@ table {
 
 .menu_delice {
     color: #2394fa;
+}
+
+.header_delice {
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 /*CSS Menu 4*/
@@ -175,6 +201,8 @@ table {
     border-radius: 50%;
 }
 
+/*Footer*/
+
 .footer {
     width: 100%;
     display: flex;
@@ -188,6 +216,36 @@ table {
 
 .footer_element {
     color: $color-secondary;
+    transition: transform 400ms;
+    &:hover {
+        animation: wiggle 600ms ease-out;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .footer_mentions {
@@ -197,8 +255,6 @@ table {
 .footer_contact {
     margin-right: 20px;
 }
-
-
 
 /**/
 
@@ -231,8 +287,6 @@ table {
 .header_resto {
     font-size: 50px;
     font-weight: bold;
-    padding-bottom: 20px;
-    padding-top: 20px;
 }
 
 li {
@@ -241,6 +295,11 @@ li {
 }
 
 /*CSS Page 1*/
+
+.logo_note {
+    text-align: center;
+    padding-top: 30px;
+}
 
 .menu_1_detail {
     background-color: #fcdfdb;
@@ -265,6 +324,10 @@ li {
     font-size: 44px;
     font-weight: bold;
     margin: 40px auto;
+}
+
+.logo_h6 {
+    height: 50px;
 }
 
 /*CSS Page 2*/
@@ -330,10 +393,6 @@ li {
     color: #9c81db;
 }
 
-/*background: -webkit-linear-gradient(45deg, #af4261, #f3ec78);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent*/
-
 /*CSS Page 3*/
 
 .menu_3_detail {
@@ -356,4 +415,6 @@ li {
     background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
