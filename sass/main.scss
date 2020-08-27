@@ -97,7 +97,6 @@ a {
     cursor: pointer;
     display: flex;
     align-items: center;
-    overflow: hidden;
     justify-content: center;
     transform: scale(1);
     transition-duration: 400ms;
@@ -106,13 +105,8 @@ a {
     }
 }
 
-.menu {
-    font-size: 40px;
-    text-align: center;
-}
-
 .resto_note {
-    background-color: #fcdfdb;
+    background-color: $color-note-background;
 }
 
 .resto_chic {
@@ -124,62 +118,65 @@ a {
 }
 
 .resto_palette {
-    background-color: #fdfffd;
+    background-color: $color-palette-background;
 }
 
+.menu {
+    font-size: 40px;
+    text-align: center;
+}
 
 
 /*CSS Menu 1*/
 
-.resto_1 {
-    color: black;
-}
-
-.menu_note {
-    color: black;
-    text-transform: uppercase;
-    margin-top: 50px;
+.menu__note {
+    &--name {
+        color: black;
+    }
+    &--title {
+        color: black;
+        text-transform: uppercase;
+        margin-top: 50px;
+    }
 }
 
 /*CSS Menu 2*/
 
-.resto_2 {
-    background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-.menu_chic {
-    text-transform: uppercase;
+.menu__chic {
+    &--name {
+        background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    &--title {
+        text-transform: uppercase;
+    }
 }
 
 /*CSS Menu 3*/
 
-.resto_3 {
-    background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-.menu_delice {
-    color: #2394fa;
-}
-
-.header_delice {
-    padding-top: 100px;
-    padding-bottom: 50px;
+.menu__delice {
+    &--name {
+        background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;    
+    }
+    &--title {
+        color: #2394fa;
+    }
 }
 
 /*CSS Menu 4*/
 
-.resto_4 {
-    background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-.menu_palette {
-    color: #72bf56;
+.menu__palette {
+    &--name {
+        background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;    
+    }
+    &--title {
+        color: $color-palette-3;
+    }
 }
 
 /*CSS Bouton Prochainement*/
@@ -203,6 +200,52 @@ a {
     height: 8px;
     background-color: $color-secondary;
     border-radius: 50%;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(0.2);
+    }
+
+    20% {
+        transform: translateY(0.4);
+    }
+
+    30% {
+        transform: translateY(0.6);
+    }
+
+    40% {
+        transform: translateY(0.8);
+    }
+
+    50% {
+        transform: translateY(1);
+    }
+
+    60% {
+        transform: translateY(0.8);
+    }
+
+    70% {
+        transform: translateY(0.6);
+    }
+
+    80% {
+        transform: translateY(0.4);
+    }
+
+    90% {
+        transform: translateY(0.2);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /*Footer*/
@@ -258,13 +301,19 @@ a {
     }
 }
 
-/**/
+/*------------------------------------------------------------------------------------------*/
 
 .titre_resto {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     margin-top: 50px;
     margin-bottom: 30px;
+    text-align: center;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu_detail {
@@ -274,16 +323,10 @@ a {
     padding-right: 100px;
 }
 
-.titre_resto,
 .header_resto,
 .mets,
 .titre_fin {
     text-align: center;
-}
-
-.titre_resto {
-    font-size: 60px;
-    font-weight: bold;
 }
 
 .header_resto {
@@ -291,21 +334,29 @@ a {
     font-weight: bold;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-}
 
 /*CSS Page 1*/
 
-.logo_note {
-    text-align: center;
-    padding-top: 30px;
+.menu-note {
+    background-color: $color-note-background;
+    line-height: 250%;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-.menu_1_detail {
-    background-color: #fcdfdb;
+.header-note {
+    &__logo {
+        text-align: center;
+        padding-top: 30px;
+    }
+    &__titre {
+        font-size: 50px;
+        font-weight: bold;    
+        text-align: center;
+    }
 }
+
 
 .mets_1 {
     font-size: 36px;
@@ -322,14 +373,17 @@ li {
     font-weight: bold;
 }
 
-.titre_fin {
-    font-size: 44px;
-    font-weight: bold;
-    margin: 40px auto;
-}
-
-.logo_h6 {
-    height: 50px;
+.footer-note {
+    &__titre {
+        font-size: 44px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    &__logo {
+        height: 50px;
+    }
 }
 
 /*CSS Page 2*/
@@ -405,16 +459,18 @@ li {
     background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 /*CSS Page 4*/
 
 .menu_4_detail {
-    background-color: #fdfffd;
+    background-color: $color-palette-background;
 }
 
 .header_palette {
-    background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
+    background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     padding-top: 100px;

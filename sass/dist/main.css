@@ -1,8 +1,8 @@
 @charset "UTF-8";
-/*Couleurs Note Enchantée*/
+/*Couleurs Menu Note*/
 /*Couleur Chic à la française*/
 /*Couleurs Délice Papilles*/
-/*Couleur Palette Goût*/
+/*Couleur Menu 4*/
 .header {
   display: flex;
   justify-content: center;
@@ -104,18 +104,12 @@ a:visited {
   cursor: pointer;
   display: flex;
   align-items: center;
-  overflow: hidden;
   justify-content: center;
   transform: scale(1);
   transition-duration: 400ms;
 }
 .resto:hover {
   transform: scale(1.4);
-}
-
-.menu {
-  font-size: 40px;
-  text-align: center;
 }
 
 .resto_note {
@@ -134,52 +128,48 @@ a:visited {
   background-color: #fdfffd;
 }
 
-/*CSS Menu 1*/
-.resto_1 {
-  color: black;
+.menu {
+  font-size: 40px;
+  text-align: center;
 }
 
-.menu_note {
+/*CSS Menu 1*/
+.menu__note--name {
+  color: black;
+}
+.menu__note--title {
   color: black;
   text-transform: uppercase;
   margin-top: 50px;
 }
 
 /*CSS Menu 2*/
-.resto_2 {
+.menu__chic--name {
   background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-
-.menu_chic {
+.menu__chic--title {
   text-transform: uppercase;
 }
 
 /*CSS Menu 3*/
-.resto_3 {
+.menu__delice--name {
   background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-
-.menu_delice {
+.menu__delice--title {
   color: #2394fa;
 }
 
-.header_delice {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
 /*CSS Menu 4*/
-.resto_4 {
+.menu__palette--name {
   background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-
-.menu_palette {
+.menu__palette--title {
   color: #72bf56;
 }
 
@@ -205,6 +195,41 @@ a:visited {
   border-radius: 50%;
 }
 
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0.2);
+  }
+  20% {
+    transform: translateY(0.4);
+  }
+  30% {
+    transform: translateY(0.6);
+  }
+  40% {
+    transform: translateY(0.8);
+  }
+  50% {
+    transform: translateY(1);
+  }
+  60% {
+    transform: translateY(0.8);
+  }
+  70% {
+    transform: translateY(0.6);
+  }
+  80% {
+    transform: translateY(0.4);
+  }
+  90% {
+    transform: translateY(0.2);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*Footer*/
 .footer {
   width: 100%;
@@ -251,12 +276,18 @@ a:visited {
     transform: translateX(0);
   }
 }
-/**/
+/*------------------------------------------------------------------------------------------*/
 .titre_resto {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   margin-top: 50px;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu_detail {
@@ -266,16 +297,10 @@ a:visited {
   padding-right: 100px;
 }
 
-.titre_resto,
 .header_resto,
 .mets,
 .titre_fin {
   text-align: center;
-}
-
-.titre_resto {
-  font-size: 60px;
-  font-weight: bold;
 }
 
 .header_resto {
@@ -283,19 +308,23 @@ a:visited {
   font-weight: bold;
 }
 
-li {
-  display: flex;
-  justify-content: space-between;
+/*CSS Page 1*/
+.menu-note {
+  background-color: #fcdfdb;
+  line-height: 250%;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
-/*CSS Page 1*/
-.logo_note {
+.header-note__logo {
   text-align: center;
   padding-top: 30px;
 }
-
-.menu_1_detail {
-  background-color: #fcdfdb;
+.header-note__titre {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .mets_1 {
@@ -313,13 +342,14 @@ li {
   font-weight: bold;
 }
 
-.titre_fin {
+.footer-note__titre {
   font-size: 44px;
   font-weight: bold;
-  margin: 40px auto;
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 80px;
 }
-
-.logo_h6 {
+.footer-note__logo {
   height: 50px;
 }
 
@@ -394,6 +424,8 @@ li {
   background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 /*CSS Page 4*/
