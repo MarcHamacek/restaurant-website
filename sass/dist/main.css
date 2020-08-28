@@ -65,7 +65,7 @@ table {
 
 /*# sourceMappingURL=style.css.map */
 /*Début du Code CSS*/
-/*CSS Index*/
+/*Index*/
 /*Header*/
 .header {
   width: 100%;
@@ -133,7 +133,7 @@ a:visited {
   text-align: center;
 }
 
-/*CSS Menu 1*/
+/*Menu 1*/
 .menu__note--name {
   color: black;
 }
@@ -143,7 +143,7 @@ a:visited {
   margin-top: 50px;
 }
 
-/*CSS Menu 2*/
+/*Menu 2*/
 .menu__chic--name {
   background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
   -webkit-text-fill-color: transparent;
@@ -153,7 +153,7 @@ a:visited {
   text-transform: uppercase;
 }
 
-/*CSS Menu 3*/
+/*Menu 3*/
 .menu__delice--name {
   background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
   -webkit-text-fill-color: transparent;
@@ -163,7 +163,7 @@ a:visited {
   color: #2394fa;
 }
 
-/*CSS Menu 4*/
+/*Menu 4*/
 .menu__palette--name {
   background: -webkit-linear-gradient(45deg, #469840, #c8fd95);
   -webkit-text-fill-color: transparent;
@@ -173,7 +173,7 @@ a:visited {
   color: #72bf56;
 }
 
-/*CSS Bouton Prochainement*/
+/*Bouton Prochainement*/
 .prochainement {
   text-align: center;
   margin: 78px auto;
@@ -315,6 +315,7 @@ li {
   margin-bottom: 50px;
   padding-left: 100px;
   padding-right: 100px;
+  color: #714a4e;
 }
 
 .header-note__logo {
@@ -324,27 +325,67 @@ li {
 .header-note__titre {
   font-size: 50px;
   font-weight: bold;
+  color: #40161c;
   text-align: center;
 }
 
-.mets_1 {
+.liste-note__mets {
   font-size: 36px;
   font-weight: bold;
+  color: #40161c;
   margin-top: 80px;
   margin-bottom: 26px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
-
-.plat_1, .prix_1 {
+.liste-note__mets:before, .liste-note__mets:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+  left: 0;
+  background-color: #40161c;
+}
+.liste-note__mets:hover {
+  cursor: pointer;
+}
+.liste-note__mets:hover:before, .liste-note__mets:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+.liste-note__mets--plat {
+  font-size: 28px;
+}
+.liste-note__mets--prix {
+  font-weight: bold;
   font-size: 28px;
 }
 
-.prix_1 {
-  font-weight: bold;
+.first-note {
+  margin-left: 420px;
+  margin-right: 420px;
+}
+
+.second-note {
+  margin-left: 370px;
+  margin-right: 370px;
+}
+
+.third-note {
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 .footer-note__titre {
   font-size: 44px;
   font-weight: bold;
+  color: #40161c;
   text-align: center;
   margin-top: 80px;
   padding-bottom: 80px;
