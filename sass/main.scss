@@ -110,11 +110,11 @@ a {
 }
 
 .resto_chic {
-    background-color: #fff5fe;
+    background-color: $color-chic-background;
 }
 
 .resto_delice {
-    background-color: #f9f9f9;
+    background-color: $color-delice-background-1;
 }
 
 .resto_palette {
@@ -170,9 +170,9 @@ a {
 
 .menu__palette {
     &--name {
-        background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2);
+        background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2, $color-palette-3);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;    
+        -webkit-background-clip: text;
     }
     &--title {
         color: $color-palette-3;
@@ -275,7 +275,7 @@ a {
         color: $color-secondary;
         margin-right: 20px;
         &:hover {
-            animation: wiggle 500ms ease-out;
+            animation: wiggle 350ms ease-out;
         }
     }
 }
@@ -436,65 +436,112 @@ li {
 
 /*CSS Page 2*/
 
-.menu_2_detail {
-    background-color: #fff5fe;
+.menu-chic {
+    background-color: $color-chic-background;
+    line-height: 250%;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 100px;
 }
 
-.header_chic_francais {
-    background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    padding-top: 100px;
+.header-chic {
+    &__titre {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        background: -webkit-linear-gradient(45deg, $color-chic-titre-1, $color-chic-titre-2, $color-chic-titre-3);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        margin-left: 320px;
+        margin-right: 320px;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
 }
 
-.mets_entree_2,
-.mets_pp_2,
-.mets_dessert_2 {
-    font-weight: bold;
-    font-size: 32px;
-}
-
-.liste_entree_2,
-.liste_plat_2,
-.liste_dessert_2 {
-    margin-left: 70px;
-    margin-right: 70px;
-}
-
-.plat_2,
-.prix_2 {
-    font-size: 26px;
-}
-
-.mets_entree_2 {
-    color: #cb8029;
-    margin-top: 100px;
-    margin-bottom: 30px;
-}
-
-.liste_entree_2 {
-    color: #d08c3e;
-}
-
-.mets_pp_2 {
-    color: #a96e9d;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.liste_plat_2 {
-    color: #b986ae;
-}
-
-.mets_dessert_2 {
-    color: #7251cd;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.liste_dessert_2 {
-    color: #9c81db;
+.liste-chic {
+    &__titre {
+        font-weight: bold;
+        font-size: 32px;
+        text-align: center;
+        margin: 60px auto 30px auto;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          width: 0px;
+          height: 5px;
+          margin: 5px 0 0;
+          transition: all 0.1s ease-in-out;
+          transition-duration: 0.75s;
+          opacity: 0;
+          left: 0;
+        }
+        &.first-chic {
+            &:before,
+            &:after {
+                background-color: $color-chic-titre-1;
+            }
+        }
+        &.second-chic {
+            &:before,
+            &:after {
+                background-color: $color-chic-titre-2;
+            }
+        }
+        &.third-chic {
+            &:before,
+            &:after {
+                background-color: $color-chic-titre-3;
+            }
+        }
+            &:hover {
+                cursor: pointer;
+                &:before,
+                &:after {
+                width: 100%;
+                opacity: 1;
+                }
+            }
+        &.first-chic {
+            color: $color-chic-titre-1;
+            margin-left: 370px;
+            margin-right: 370px;
+        }
+        &.second-chic {
+            color: $color-chic-titre-2;
+            margin-left: 430px;
+            margin-right: 430px;
+        }
+        &.third-chic {
+            color: $color-chic-titre-3;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+    }
+    &__liste {
+        padding-left: 160px;
+        padding-right: 160px;
+        &.entree-chic {
+            color: $color-chic-txt-1;
+        }
+        &.plat-chic {
+            color: $color-chic-txt-2;
+        }
+        &.dessert-chic {
+            color: $color-chic-txt-3;
+        }
+        &--plat {
+            font-size: 26px;
+        }
+        &--prix {
+            font-size: 30px;
+        }
+    }
 }
 
 /*CSS Page 3*/
@@ -587,14 +634,85 @@ li {
 
 /*CSS Page 4*/
 
-.menu_4_detail {
+.menu-palette {
     background-color: $color-palette-background;
+    line-height: 250%;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
 }
 
-.header_palette {
-    background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    padding-top: 100px;
-    padding-bottom: 50px;
+.header-palette {
+    &__titre {
+        font-size: 50px;
+        font-weight: bold;
+        background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2, $color-palette-3);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.liste-palette {
+    &__titre {
+        font-size: 30px;
+        color: $color-palette-txt;
+        text-align: center;
+        margin-left: 400px;
+        margin-right: 400px;
+        margin-bottom: 30px;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            width: 0px;
+            height: 5px;
+            margin: 5px 0 0;
+            transition: all 0.1s ease-in-out;
+            transition-duration: 0.75s;
+            opacity: 0;
+            left: 0;
+            background-color: $color-palette-2;
+            }
+            &:hover {
+                cursor: pointer;
+                &:before,
+                &:after {
+                width: 100%;
+                opacity: 1;
+                }
+            }
+    }
+    &__liste {
+        padding-left: 160px;
+        padding-right: 160px;
+        margin-bottom: 50px;
+        &--plat {
+            font-size: 24px;
+        }
+        &--prix {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+}
+
+.first-palette {
+    margin-left: 450px;
+    margin-right: 450px;
+}
+.second-palette {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.third-palette {
+    margin-left: 400px;
+    margin-right: 400px;
 }
