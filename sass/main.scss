@@ -103,25 +103,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    &.resto_note {
+        background-color: $color-note-background;
+    }
+    &.resto_chic {
+        background-color: $color-chic-background;
+    }
+    &.resto_delice {
+        background-color: $color-delice-background-1;
+    }
+    &.resto_palette {
+        background-color: $color-palette-background;
+    }
     &:hover .menu {
         transform: scale(1.3);
     }
-}
-
-.resto_note {
-    background-color: $color-note-background;
-}
-
-.resto_chic {
-    background-color: $color-chic-background;
-}
-
-.resto_delice {
-    background-color: $color-delice-background-1;
-}
-
-.resto_palette {
-    background-color: $color-palette-background;
 }
 
 .menu {
@@ -132,22 +128,25 @@ a {
 }
 
 
-/*Menu 1*/
+/*Menu Note*/
 
 .menu__note {
     &--name {
         color: black;
+        font-family: 'Devonshire', serif, sans-serif;
     }
     &--title {
         color: black;
+        font-family: 'Merienda', serif, sans-serif;
         text-transform: uppercase;
         margin-top: 50px;
     }
 }
 
-/*Menu 2*/
+/*Menu Chic*/
 
 .menu__chic {
+    font-family: 'Redressed', serif, sans-serif;
     line-height: 250%;
     &--name {
         background: -webkit-linear-gradient(45deg, $color-chic-titre-1, $color-chic-titre-2, $color-chic-titre-3);
@@ -159,9 +158,10 @@ a {
     }
 }
 
-/*Menu 3*/
+/*Menu Délice*/
 
 .menu__delice {
+    font-family: 'Rochester', serif, sans-serif;
     line-height: 250%;
     &--name {
         background: -webkit-linear-gradient(45deg, $color-delice-1, $color-delice-2, $color-delice-3);
@@ -173,9 +173,10 @@ a {
     }
 }
 
-/*Menu 4*/
+/*Menu Palette*/
 
 .menu__palette {
+    font-family: 'Kaushan Script', serif, sans-serif;
     line-height: 250%;
     &--name {
         background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2, $color-palette-3);
@@ -194,6 +195,7 @@ a {
     justify-content: center;
     margin: 78px auto;
     &__btn {
+        font-family: 'Montserrat', serif, sans-serif;
         font-size: 30px;
         color: $color-secondary;
         background-color: $color-primary;
@@ -214,8 +216,6 @@ a {
     background-color: $color-secondary;
     border-radius: 50%;
     animation: blink 1.3s ease infinite;
-    //animation-duration: 400ms;//
-    /*animation-timing-function: ease-out;*/
     &.circle_2 {
         animation-delay: 200ms;
     }
@@ -237,53 +237,6 @@ a {
       opacity: 0.1;
     }
   }
-  
-
-@keyframes updown {
-    0% {
-        transform: translateY(0);
-    }
-
-    10% {
-        transform: translateY(0.2);
-    }
-
-    20% {
-        transform: translateY(0.4);
-    }
-
-    30% {
-        transform: translateY(0.6);
-    }
-
-    40% {
-        transform: translateY(0.8);
-    }
-
-    50% {
-        transform: translateY(1);
-    }
-
-    60% {
-        transform: translateY(0.8);
-    }
-
-    70% {
-        transform: translateY(0.6);
-    }
-
-    80% {
-        transform: translateY(0.4);
-    }
-
-    90% {
-        transform: translateY(0.2);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 /*Footer*/
 
@@ -293,6 +246,7 @@ a {
     justify-content: space-between;
     background-color: $color-primary;
     font-size: 24px;
+    font-family: 'Montserrat', serif, sans-serif;
     padding: 16px 0;
     position: fixed;
     bottom: 0;
@@ -307,7 +261,7 @@ a {
         color: $color-secondary;
         margin-right: 20px;
         &:hover {
-            animation: wiggle 350ms infinite ease-out;
+            animation: wiggle 350ms infinite ease;
         }
     }
 }
@@ -353,29 +307,11 @@ li {
     justify-content: space-between;
 }
 
-.menu_detail {
-    line-height: 250%;
-    margin-bottom: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.header_resto,
-.mets,
-.titre_fin {
-    text-align: center;
-}
-
-.header_resto {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-
 /*CSS Page 1*/
 
 .menu-note {
     background-color: $color-note-background;
+    font-family: 'Devonshire', serif, sans-serif;
     line-height: 250%;
     margin-bottom: 50px;
     padding-left: 100px;
@@ -395,14 +331,28 @@ li {
         text-align: center;
     }
 }
+
 .liste-note {
     &__mets {
+        font-family: 'Merienda', serif, sans-serif;
         font-size: 36px;
         font-weight: bold;
         color: $color-note-2;
         margin-top: 80px;
         margin-bottom: 26px;
         text-align: center;
+        &.first-note {
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        &.second-note {
+            margin-left: 350px;
+            margin-right: 350px;
+        }
+        &.third-note {
+            margin-left: 300px;
+            margin-right: 300px;
+        }
         transition: all 0.2s ease-in-out;
         position: relative;
         &:before,
@@ -437,22 +387,10 @@ li {
     }
 }
 
-.first-note {
-    margin-left: 420px;
-    margin-right: 420px;
-}
-
-.second-note {
-    margin-left: 370px;
-    margin-right: 370px;
-}
-
-.third-note {
-    margin-left: 350px;
-    margin-right: 350px;
-}
-
 .footer-note {
+    &__logo {
+        margin-right: 20px;
+    }
     &__titre {
         font-size: 44px;
         font-weight: bold;
@@ -461,15 +399,13 @@ li {
         margin-top: 80px;
         padding-bottom: 80px;
     }
-    &__logo {
-        height: 50px;
-    }
 }
 
 /*CSS Page 2*/
 
 .menu-chic {
     background-color: $color-chic-background;
+    font-family: 'Redressed', serif, sans-serif;
     line-height: 250%;
     margin-bottom: 50px;
     padding-left: 20px;
@@ -479,7 +415,7 @@ li {
 
 .header-chic {
     &__titre {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: bold;
         text-align: center;
         background: -webkit-linear-gradient(45deg, $color-chic-titre-1, $color-chic-titre-2, $color-chic-titre-3);
@@ -580,6 +516,7 @@ li {
 
 .menu-delice {
     background-color: $color-delice-background-2;
+    font-family: 'Rochester', serif, sans-serif;
     line-height: 250%;
     margin-bottom: 50px;
     padding-left: 50px;
@@ -589,14 +526,14 @@ li {
 
 .header-delice {
     &__titre {
-        font-size: 50px;
+        font-size: 80px;
         font-weight: bold;
         background: -webkit-linear-gradient(45deg, $color-delice-1, $color-delice-2, $color-delice-3);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         text-align: center;
         padding-top: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
@@ -668,6 +605,7 @@ li {
 
 .menu-palette {
     background-color: $color-palette-background;
+    font-family: 'Kaushan Script', serif, sans-serif;
     line-height: 250%;
     margin-bottom: 50px;
     padding-left: 50px;
@@ -677,14 +615,14 @@ li {
 
 .header-palette {
     &__titre {
-        font-size: 50px;
+        font-size: 80px;
         font-weight: bold;
         background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2, $color-palette-3);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         text-align: center;
         padding-top: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
@@ -693,9 +631,19 @@ li {
         font-size: 30px;
         color: $color-palette-txt;
         text-align: center;
-        margin-left: 400px;
-        margin-right: 400px;
         margin-bottom: 30px;
+        &.first-palette {
+            margin-left: 450px;
+            margin-right: 450px;
+        }
+        &.second-palette {
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        &.third-palette {
+            margin-left: 400px;
+            margin-right: 400px;
+        }
         transition: all 0.2s ease-in-out;
         position: relative;
         &:before,
@@ -733,18 +681,4 @@ li {
             font-weight: bold;
         }
     }
-}
-
-.first-palette {
-    margin-left: 450px;
-    margin-right: 450px;
-}
-.second-palette {
-    margin-left: 400px;
-    margin-right: 400px;
-}
-
-.third-palette {
-    margin-left: 400px;
-    margin-right: 400px;
 }
