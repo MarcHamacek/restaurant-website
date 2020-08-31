@@ -143,8 +143,9 @@ a {
 /*Menu 2*/
 
 .menu__chic {
+    line-height: 250%;
     &--name {
-        background: -webkit-linear-gradient(45deg, #cb8029, #a96e9d, #7251cd);
+        background: -webkit-linear-gradient(45deg, $color-chic-titre-1, $color-chic-titre-2, $color-chic-titre-3);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
@@ -156,19 +157,21 @@ a {
 /*Menu 3*/
 
 .menu__delice {
+    line-height: 250%;
     &--name {
-        background: -webkit-linear-gradient(45deg, #1c3fe0, #2394fa);
+        background: -webkit-linear-gradient(45deg, $color-delice-1, $color-delice-2, $color-delice-3);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;    
     }
     &--title {
-        color: #2394fa;
+        color: $color-delice-2;
     }
 }
 
 /*Menu 4*/
 
 .menu__palette {
+    line-height: 250%;
     &--name {
         background: -webkit-linear-gradient(45deg, $color-palette-1, $color-palette-2, $color-palette-3);
         -webkit-text-fill-color: transparent;
@@ -193,6 +196,9 @@ a {
         border-radius: 30px;
         padding: 16px 40px;
         display: flex;
+        &:hover + .circle {
+            animation-name: up-down;
+        }
         &--circle {
             margin-left: 10px
         }
@@ -205,6 +211,14 @@ a {
     height: 8px;
     background-color: $color-secondary;
     border-radius: 50%;
+    animation-duration: 350ms;
+    animation-timing-function: ease-out;
+    &.circle_2 {
+        transition-delay: 20ms;
+    }
+    &.circle_3 {
+        transition-delay: 40ms;
+    }
 }
 
 @keyframes up-down {
@@ -268,7 +282,7 @@ a {
         color: $color-secondary;
         margin-left: 20px;
         &:hover {
-            animation: wiggle 500ms ease-out;
+            animation: wiggle 350ms ease-out;
         }
     }
     &__contact {
