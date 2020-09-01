@@ -337,50 +337,43 @@ li {
 }
 
 .liste-note {
-    &__mets {
-        font-family: 'Merienda', serif, sans-serif;
-        font-size: 36px;
-        font-weight: bold;
-        color: $color-note-2;
+    &__header {
         margin-top: 80px;
-        margin-bottom: 26px;
-        text-align: center;
-        &.first-note {
-            margin-left: 400px;
-            margin-right: 400px;
-        }
-        &.second-note {
-            margin-left: 350px;
-            margin-right: 350px;
-        }
-        &.third-note {
-            margin-left: 300px;
-            margin-right: 300px;
-        }
-        transition: all 0.2s ease-in-out;
-        position: relative;
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          width: 0px;
-          height: 5px;
-          margin: 5px 0 0;
-          transition: all 0.2s ease-in-out;
-          transition-duration: 0.75s;
-          opacity: 0;
-          left: 0;
-          background-color: $color-note-2;
-        }
-            &:hover {
-                cursor: pointer;
-                &:before,
-                &:after {
-                width: 100%;
-                opacity: 1;
-                }
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        &--titre {
+            font-family: 'Merienda', serif, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: $color-note-2;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            &:before,
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -6px;
+              width: 0px;
+              height: 5px;
+              margin: 5px 0 0;
+              transition: all 0.2s ease-in-out;
+              transition-duration: 0.75s;
+              opacity: 0;
+              left: 0;
+              background-color: $color-note-2;
             }
+                &:hover {
+                    cursor: pointer;
+                    &:before,
+                    &:after {
+                    width: 100%;
+                    opacity: 1;
+                    }
+                }
+        }
+    }
+    &__mets {
         &--plat {
             font-size: 28px;
         }
