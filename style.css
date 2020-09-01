@@ -89,6 +89,10 @@ header {
 
 /*Body*/
 .container {
+  width: 100%;
+}
+
+.main {
   width: 1170px;
   margin: 0 auto;
 }
