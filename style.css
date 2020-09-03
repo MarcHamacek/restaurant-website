@@ -404,15 +404,24 @@ li {
   padding-bottom: 60px;
 }
 
-.liste-chic__titre {
+.liste-chic {
+  /*CSS Page 3*/
+  /*CSS Page 4*/
+}
+.liste-chic__header {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.liste-chic__header--titre {
   font-weight: bold;
   font-size: 32px;
   text-align: center;
-  margin: 60px auto 30px auto;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-chic__titre:before, .liste-chic__titre:after {
+.liste-chic__header--titre:before, .liste-chic__header--titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -424,59 +433,51 @@ li {
   opacity: 0;
   left: 0;
 }
-.liste-chic__titre.first-chic:before, .liste-chic__titre.first-chic:after {
+.liste-chic__header--titre.first-chic {
+  color: #d08c3e;
+}
+.liste-chic__header--titre.first-chic:before, .liste-chic__header--titre.first-chic:after {
   background-color: #d08c3e;
 }
-.liste-chic__titre.second-chic:before, .liste-chic__titre.second-chic:after {
+.liste-chic__header--titre.second-chic {
+  color: #b480aa;
+}
+.liste-chic__header--titre.second-chic:before, .liste-chic__header--titre.second-chic:after {
   background-color: #b480aa;
 }
-.liste-chic__titre.third-chic:before, .liste-chic__titre.third-chic:after {
+.liste-chic__header--titre.third-chic {
+  color: #7a5ad0;
+}
+.liste-chic__header--titre.third-chic:before, .liste-chic__header--titre.third-chic:after {
   background-color: #7a5ad0;
 }
-.liste-chic__titre:hover {
+.liste-chic__header--titre:hover {
   cursor: pointer;
 }
-.liste-chic__titre:hover:before, .liste-chic__titre:hover:after {
+.liste-chic__header--titre:hover:before, .liste-chic__header--titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-chic__titre.first-chic {
-  color: #d08c3e;
-  margin-left: 370px;
-  margin-right: 370px;
-}
-.liste-chic__titre.second-chic {
-  color: #b480aa;
-  margin-left: 430px;
-  margin-right: 430px;
-}
-.liste-chic__titre.third-chic {
-  color: #7a5ad0;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-.liste-chic__liste {
+.liste-chic__header__liste {
   padding-left: 160px;
   padding-right: 160px;
 }
-.liste-chic__liste.entree-chic {
+.liste-chic__header__liste.entree-chic {
   color: #d18d41;
 }
-.liste-chic__liste.plat-chic {
+.liste-chic__header__liste.plat-chic {
   color: #c9a0c1;
 }
-.liste-chic__liste.dessert-chic {
+.liste-chic__header__liste.dessert-chic {
   color: #ae96e2;
 }
-.liste-chic__liste--plat {
+.liste-chic__header__liste--plat {
   font-size: 26px;
 }
-.liste-chic__liste--prix {
+.liste-chic__header__liste--prix {
   font-size: 30px;
 }
-
-/*CSS Page 3*/
-.menu-delice {
+.liste-chic .menu-delice {
   background-color: #edefef;
   font-family: "Rochester", serif, sans-serif;
   line-height: 250%;
@@ -485,8 +486,7 @@ li {
   padding-right: 50px;
   padding-bottom: 100px;
 }
-
-.header-delice__titre {
+.liste-chic .header-delice__titre {
   font-size: 80px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #0e32de, #0c73f3, #4eaff7);
@@ -496,8 +496,7 @@ li {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.liste-delice__titre {
+.liste-chic .liste-delice__titre {
   font-size: 30px;
   color: black;
   text-align: center;
@@ -507,7 +506,7 @@ li {
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-delice__titre:before, .liste-delice__titre:after {
+.liste-chic .liste-delice__titre:before, .liste-chic .liste-delice__titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -519,37 +518,35 @@ li {
   opacity: 0;
   left: 0;
 }
-.liste-delice__titre.first-delice:before, .liste-delice__titre.first-delice:after {
+.liste-chic .liste-delice__titre.first-delice:before, .liste-chic .liste-delice__titre.first-delice:after {
   background-color: #0e32de;
 }
-.liste-delice__titre.second-delice:before, .liste-delice__titre.second-delice:after {
+.liste-chic .liste-delice__titre.second-delice:before, .liste-chic .liste-delice__titre.second-delice:after {
   background-color: #0c73f3;
 }
-.liste-delice__titre.third-delice:before, .liste-delice__titre.third-delice:after {
+.liste-chic .liste-delice__titre.third-delice:before, .liste-chic .liste-delice__titre.third-delice:after {
   background-color: #4eaff7;
 }
-.liste-delice__titre:hover {
+.liste-chic .liste-delice__titre:hover {
   cursor: pointer;
 }
-.liste-delice__titre:hover:before, .liste-delice__titre:hover:after {
+.liste-chic .liste-delice__titre:hover:before, .liste-chic .liste-delice__titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-delice__liste {
+.liste-chic .liste-delice__liste {
   padding-left: 160px;
   padding-right: 160px;
   margin-bottom: 50px;
 }
-.liste-delice__liste--plat {
+.liste-chic .liste-delice__liste--plat {
   font-size: 24px;
 }
-.liste-delice__liste--prix {
+.liste-chic .liste-delice__liste--prix {
   font-size: 28px;
   font-weight: bold;
 }
-
-/*CSS Page 4*/
-.menu-palette {
+.liste-chic .menu-palette {
   background-color: #fdfffd;
   font-family: "Kaushan Script", serif, sans-serif;
   line-height: 250%;
@@ -558,8 +555,7 @@ li {
   padding-right: 50px;
   padding-bottom: 100px;
 }
-
-.header-palette__titre {
+.liste-chic .header-palette__titre {
   font-size: 80px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #469840, #72bf56, #c8fd95);
@@ -569,8 +565,7 @@ li {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.liste-palette__titre {
+.liste-chic .liste-palette__titre {
   font-size: 30px;
   color: black;
   text-align: center;
@@ -578,19 +573,19 @@ li {
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-palette__titre.first-palette {
+.liste-chic .liste-palette__titre.first-palette {
   margin-left: 450px;
   margin-right: 450px;
 }
-.liste-palette__titre.second-palette {
+.liste-chic .liste-palette__titre.second-palette {
   margin-left: 400px;
   margin-right: 400px;
 }
-.liste-palette__titre.third-palette {
+.liste-chic .liste-palette__titre.third-palette {
   margin-left: 400px;
   margin-right: 400px;
 }
-.liste-palette__titre:before, .liste-palette__titre:after {
+.liste-chic .liste-palette__titre:before, .liste-chic .liste-palette__titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -603,22 +598,22 @@ li {
   left: 0;
   background-color: #72bf56;
 }
-.liste-palette__titre:hover {
+.liste-chic .liste-palette__titre:hover {
   cursor: pointer;
 }
-.liste-palette__titre:hover:before, .liste-palette__titre:hover:after {
+.liste-chic .liste-palette__titre:hover:before, .liste-chic .liste-palette__titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-palette__liste {
+.liste-chic__liste {
   padding-left: 160px;
   padding-right: 160px;
   margin-bottom: 50px;
 }
-.liste-palette__liste--plat {
+.liste-chic__liste--plat {
   font-size: 24px;
 }
-.liste-palette__liste--prix {
+.liste-chic__liste--prix {
   font-size: 28px;
   font-weight: bold;
 }
