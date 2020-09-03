@@ -437,40 +437,40 @@ li {
         text-align: center;
         transition: all 0.2s ease-in-out;
         position: relative;
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          width: 0px;
-          height: 5px;
-          margin: 5px 0 0;
-          transition: all 0.1s ease-in-out;
-          transition-duration: 0.75s;
-          opacity: 0;
-          left: 0;
-        }
-        &.first-chic {
-            color: $color-chic-titre-1;
             &:before,
             &:after {
-                background-color: $color-chic-titre-1;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            width: 0px;
+            height: 5px;
+            margin: 5px 0 0;
+            transition: all 0.1s ease-in-out;
+            transition-duration: 0.75s;
+            opacity: 0;
+            left: 0;
             }
-        }
-        &.second-chic {
-            color: $color-chic-titre-2;
-            &:before,
-            &:after {
-                background-color: $color-chic-titre-2;
+            &.first-chic {
+                color: $color-chic-titre-1;
+                &:before,
+                &:after {
+                    background-color: $color-chic-titre-1;
+                }
             }
-        }
-        &.third-chic {
-            color: $color-chic-titre-3;
-            &:before,
-            &:after {
-                background-color: $color-chic-titre-3;
+            &.second-chic {
+                color: $color-chic-titre-2;
+                &:before,
+                &:after {
+                    background-color: $color-chic-titre-2;
+                }
             }
-        }
+            &.third-chic {
+                color: $color-chic-titre-3;
+                &:before,
+                &:after {
+                    background-color: $color-chic-titre-3;
+                }
+            }
             &:hover {
                 cursor: pointer;
                 &:before,
@@ -479,6 +479,7 @@ li {
                 opacity: 1;
                 }
             }
+        }
     }
     &__liste {
         padding-left: 160px;
@@ -660,7 +661,6 @@ li {
                 opacity: 1;
                 }
             }
-        }
     }
     &__liste {
         padding-left: 160px;

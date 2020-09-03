@@ -3,6 +3,12 @@
 /*Couleur Chic à la française*/
 /*Couleurs Délice Papilles*/
 /*Couleur Menu 4*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 .header {
   display: flex;
   justify-content: center;
@@ -67,6 +73,10 @@ table {
 /*Début du Code CSS*/
 /*Index*/
 /*Header*/
+header {
+  width: 100%;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -79,6 +89,10 @@ table {
 
 /*Body*/
 .container {
+  width: 100%;
+}
+
+.main {
   width: 1170px;
   margin: 0 auto;
 }
@@ -105,46 +119,45 @@ a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(1);
-  transition-duration: 400ms;
 }
-.resto:hover {
-  transform: scale(1.4);
-}
-
-.resto_note {
+.resto.resto_note {
   background-color: #fcdfdb;
 }
-
-.resto_chic {
+.resto.resto_chic {
   background-color: #fff5fe;
 }
-
-.resto_delice {
+.resto.resto_delice {
   background-color: #f9f9f9;
 }
-
-.resto_palette {
+.resto.resto_palette {
   background-color: #fdfffd;
+}
+.resto:hover .menu {
+  transform: scale(1.3);
 }
 
 .menu {
   font-size: 40px;
   text-align: center;
+  transform: scale(1);
+  transition-duration: 400ms;
 }
 
-/*Menu 1*/
+/*Menu Note*/
 .menu__note--name {
   color: black;
+  font-family: "Devonshire", serif, sans-serif;
 }
 .menu__note--title {
   color: black;
+  font-family: "Merienda", serif, sans-serif;
   text-transform: uppercase;
   margin-top: 50px;
 }
 
-/*Menu 2*/
+/*Menu Chic*/
 .menu__chic {
+  font-family: "Redressed", serif, sans-serif;
   line-height: 250%;
 }
 .menu__chic--name {
@@ -156,8 +169,9 @@ a:visited {
   text-transform: uppercase;
 }
 
-/*Menu 3*/
+/*Menu Délice*/
 .menu__delice {
+  font-family: "Rochester", serif, sans-serif;
   line-height: 250%;
 }
 .menu__delice--name {
@@ -169,8 +183,9 @@ a:visited {
   color: #0c73f3;
 }
 
-/*Menu 4*/
+/*Menu Palette*/
 .menu__palette {
+  font-family: "Kaushan Script", serif, sans-serif;
   line-height: 250%;
 }
 .menu__palette--name {
@@ -189,6 +204,7 @@ a:visited {
   margin: 78px auto;
 }
 .prochainement__btn {
+  font-family: "Montserrat", serif, sans-serif;
   font-size: 30px;
   color: #fdcb46;
   background-color: #579c87;
@@ -196,9 +212,6 @@ a:visited {
   border-radius: 30px;
   padding: 16px 40px;
   display: flex;
-}
-.prochainement__btn:hover + .circle {
-  animation-name: up-down;
 }
 .prochainement__btn--circle {
   margin-left: 10px;
@@ -210,49 +223,24 @@ a:visited {
   height: 8px;
   background-color: #fdcb46;
   border-radius: 50%;
-  animation-duration: 350ms;
-  animation-timing-function: ease-out;
+  animation: blink 1.3s ease infinite;
 }
 .circle.circle_2 {
-  transition-delay: 20ms;
+  animation-delay: 200ms;
 }
 .circle.circle_3 {
-  transition-delay: 40ms;
+  animation-delay: 400ms;
 }
 
-@keyframes up-down {
+@keyframes blink {
   0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(0.2);
+    opacity: 0.1;
   }
   20% {
-    transform: translateY(0.4);
-  }
-  30% {
-    transform: translateY(0.6);
-  }
-  40% {
-    transform: translateY(0.8);
-  }
-  50% {
-    transform: translateY(1);
-  }
-  60% {
-    transform: translateY(0.8);
-  }
-  70% {
-    transform: translateY(0.6);
-  }
-  80% {
-    transform: translateY(0.4);
-  }
-  90% {
-    transform: translateY(0.2);
+    opacity: 1;
   }
   100% {
-    transform: translateY(0);
+    opacity: 0.1;
   }
 }
 /*Footer*/
@@ -262,6 +250,7 @@ a:visited {
   justify-content: space-between;
   background-color: #579c87;
   font-size: 24px;
+  font-family: "Montserrat", serif, sans-serif;
   padding: 16px 0;
   position: fixed;
   bottom: 0;
@@ -271,14 +260,14 @@ a:visited {
   margin-left: 20px;
 }
 .footer__mentions:hover {
-  animation: wiggle 350ms ease-out;
+  animation: wiggle 350ms infinite ease-out;
 }
 .footer__contact {
   color: #fdcb46;
   margin-right: 20px;
 }
 .footer__contact:hover {
-  animation: wiggle 350ms ease-out;
+  animation: wiggle 350ms infinite ease;
 }
 
 @keyframes wiggle {
@@ -315,27 +304,10 @@ li {
   justify-content: space-between;
 }
 
-.menu_detail {
-  line-height: 250%;
-  margin-bottom: 50px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.header_resto,
-.mets,
-.titre_fin {
-  text-align: center;
-}
-
-.header_resto {
-  font-size: 50px;
-  font-weight: bold;
-}
-
 /*CSS Page 1*/
 .menu-note {
   background-color: #fcdfdb;
+  font-family: "Devonshire", serif, sans-serif;
   line-height: 250%;
   margin-bottom: 50px;
   padding-left: 100px;
@@ -354,17 +326,21 @@ li {
   text-align: center;
 }
 
-.liste-note__mets {
+.liste-note__header {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.liste-note__header--titre {
+  font-family: "Merienda", serif, sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #40161c;
-  margin-top: 80px;
-  margin-bottom: 26px;
-  text-align: center;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-note__mets:before, .liste-note__mets:after {
+.liste-note__header--titre:before, .liste-note__header--titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -377,10 +353,10 @@ li {
   left: 0;
   background-color: #40161c;
 }
-.liste-note__mets:hover {
+.liste-note__header--titre:hover {
   cursor: pointer;
 }
-.liste-note__mets:hover:before, .liste-note__mets:hover:after {
+.liste-note__header--titre:hover:before, .liste-note__header--titre:hover:after {
   width: 100%;
   opacity: 1;
 }
@@ -392,21 +368,9 @@ li {
   font-size: 28px;
 }
 
-.first-note {
-  margin-left: 420px;
-  margin-right: 420px;
+.footer-note__logo {
+  margin-right: 20px;
 }
-
-.second-note {
-  margin-left: 370px;
-  margin-right: 370px;
-}
-
-.third-note {
-  margin-left: 350px;
-  margin-right: 350px;
-}
-
 .footer-note__titre {
   font-size: 44px;
   font-weight: bold;
@@ -415,13 +379,11 @@ li {
   margin-top: 80px;
   padding-bottom: 80px;
 }
-.footer-note__logo {
-  height: 50px;
-}
 
 /*CSS Page 2*/
 .menu-chic {
   background-color: #fff5fe;
+  font-family: "Redressed", serif, sans-serif;
   line-height: 250%;
   margin-bottom: 50px;
   padding-left: 20px;
@@ -430,7 +392,7 @@ li {
 }
 
 .header-chic__titre {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
   text-align: center;
   background: -webkit-linear-gradient(45deg, #d08c3e, #b480aa, #7a5ad0);
@@ -442,15 +404,24 @@ li {
   padding-bottom: 60px;
 }
 
-.liste-chic__titre {
+.liste-chic {
+  /*CSS Page 3*/
+  /*CSS Page 4*/
+}
+.liste-chic__header {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.liste-chic__header--titre {
   font-weight: bold;
   font-size: 32px;
   text-align: center;
-  margin: 60px auto 30px auto;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-chic__titre:before, .liste-chic__titre:after {
+.liste-chic__header--titre:before, .liste-chic__header--titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -462,89 +433,83 @@ li {
   opacity: 0;
   left: 0;
 }
-.liste-chic__titre.first-chic:before, .liste-chic__titre.first-chic:after {
+.liste-chic__header--titre.first-chic {
+  color: #d08c3e;
+}
+.liste-chic__header--titre.first-chic:before, .liste-chic__header--titre.first-chic:after {
   background-color: #d08c3e;
 }
-.liste-chic__titre.second-chic:before, .liste-chic__titre.second-chic:after {
+.liste-chic__header--titre.second-chic {
+  color: #b480aa;
+}
+.liste-chic__header--titre.second-chic:before, .liste-chic__header--titre.second-chic:after {
   background-color: #b480aa;
 }
-.liste-chic__titre.third-chic:before, .liste-chic__titre.third-chic:after {
+.liste-chic__header--titre.third-chic {
+  color: #7a5ad0;
+}
+.liste-chic__header--titre.third-chic:before, .liste-chic__header--titre.third-chic:after {
   background-color: #7a5ad0;
 }
-.liste-chic__titre:hover {
+.liste-chic__header--titre:hover {
   cursor: pointer;
 }
-.liste-chic__titre:hover:before, .liste-chic__titre:hover:after {
+.liste-chic__header--titre:hover:before, .liste-chic__header--titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-chic__titre.first-chic {
-  color: #d08c3e;
-  margin-left: 370px;
-  margin-right: 370px;
-}
-.liste-chic__titre.second-chic {
-  color: #b480aa;
-  margin-left: 430px;
-  margin-right: 430px;
-}
-.liste-chic__titre.third-chic {
-  color: #7a5ad0;
-  margin-left: 400px;
-  margin-right: 400px;
-}
-.liste-chic__liste {
+.liste-chic__header__liste {
   padding-left: 160px;
   padding-right: 160px;
 }
-.liste-chic__liste.entree-chic {
+.liste-chic__header__liste.entree-chic {
   color: #d18d41;
 }
-.liste-chic__liste.plat-chic {
+.liste-chic__header__liste.plat-chic {
   color: #c9a0c1;
 }
-.liste-chic__liste.dessert-chic {
+.liste-chic__header__liste.dessert-chic {
   color: #ae96e2;
 }
-.liste-chic__liste--plat {
+.liste-chic__header__liste--plat {
   font-size: 26px;
 }
-.liste-chic__liste--prix {
+.liste-chic__header__liste--prix {
   font-size: 30px;
 }
-
-/*CSS Page 3*/
-.menu-delice {
+.liste-chic .menu-delice {
   background-color: #edefef;
+  font-family: "Rochester", serif, sans-serif;
   line-height: 250%;
   margin-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 100px;
 }
-
-.header-delice__titre {
-  font-size: 50px;
+.liste-chic .header-delice__titre {
+  font-size: 80px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #0e32de, #0c73f3, #4eaff7);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
-
-.liste-delice__titre {
+.liste-chic .liste-delice__header {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.liste-chic .liste-delice__header--titre {
   font-size: 30px;
   color: black;
   text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
-  margin-bottom: 30px;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-delice__titre:before, .liste-delice__titre:after {
+.liste-chic .liste-delice__header--titre:before, .liste-chic .liste-delice__header--titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -556,67 +521,74 @@ li {
   opacity: 0;
   left: 0;
 }
-.liste-delice__titre.first-delice:before, .liste-delice__titre.first-delice:after {
+.liste-chic .liste-delice__header--titre.first-delice:before, .liste-chic .liste-delice__header--titre.first-delice:after {
   background-color: #0e32de;
 }
-.liste-delice__titre.second-delice:before, .liste-delice__titre.second-delice:after {
+.liste-chic .liste-delice__header--titre.second-delice:before, .liste-chic .liste-delice__header--titre.second-delice:after {
   background-color: #0c73f3;
 }
-.liste-delice__titre.third-delice:before, .liste-delice__titre.third-delice:after {
+.liste-chic .liste-delice__header--titre.third-delice:before, .liste-chic .liste-delice__header--titre.third-delice:after {
   background-color: #4eaff7;
 }
-.liste-delice__titre:hover {
+.liste-chic .liste-delice__header--titre:hover {
   cursor: pointer;
 }
-.liste-delice__titre:hover:before, .liste-delice__titre:hover:after {
+.liste-chic .liste-delice__header--titre:hover:before, .liste-chic .liste-delice__header--titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-delice__liste {
+.liste-chic .liste-delice__liste {
   padding-left: 160px;
   padding-right: 160px;
   margin-bottom: 50px;
 }
-.liste-delice__liste--plat {
+.liste-chic .liste-delice__liste--plat {
   font-size: 24px;
 }
-.liste-delice__liste--prix {
+.liste-chic .liste-delice__liste--prix {
   font-size: 28px;
   font-weight: bold;
 }
-
-/*CSS Page 4*/
-.menu-palette {
+.liste-chic .menu-palette {
   background-color: #fdfffd;
+  font-family: "Kaushan Script", serif, sans-serif;
   line-height: 250%;
   margin-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 100px;
 }
-
-.header-palette__titre {
-  font-size: 50px;
+.liste-chic .header-palette__titre {
+  font-size: 80px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #469840, #72bf56, #c8fd95);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
-
-.liste-palette__titre {
+.liste-chic .liste-palette__titre {
   font-size: 30px;
   color: black;
   text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
   margin-bottom: 30px;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.liste-palette__titre:before, .liste-palette__titre:after {
+.liste-chic .liste-palette__titre.first-palette {
+  margin-left: 450px;
+  margin-right: 450px;
+}
+.liste-chic .liste-palette__titre.second-palette {
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.liste-chic .liste-palette__titre.third-palette {
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.liste-chic .liste-palette__titre:before, .liste-chic .liste-palette__titre:after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -629,37 +601,22 @@ li {
   left: 0;
   background-color: #72bf56;
 }
-.liste-palette__titre:hover {
+.liste-chic .liste-palette__titre:hover {
   cursor: pointer;
 }
-.liste-palette__titre:hover:before, .liste-palette__titre:hover:after {
+.liste-chic .liste-palette__titre:hover:before, .liste-chic .liste-palette__titre:hover:after {
   width: 100%;
   opacity: 1;
 }
-.liste-palette__liste {
+.liste-chic__liste {
   padding-left: 160px;
   padding-right: 160px;
   margin-bottom: 50px;
 }
-.liste-palette__liste--plat {
+.liste-chic__liste--plat {
   font-size: 24px;
 }
-.liste-palette__liste--prix {
+.liste-chic__liste--prix {
   font-size: 28px;
   font-weight: bold;
-}
-
-.first-palette {
-  margin-left: 450px;
-  margin-right: 450px;
-}
-
-.second-palette {
-  margin-left: 400px;
-  margin-right: 400px;
-}
-
-.third-palette {
-  margin-left: 400px;
-  margin-right: 400px;
 }
