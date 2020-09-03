@@ -418,8 +418,6 @@ li {
         background: -webkit-linear-gradient(45deg, $color-chic-titre-1, $color-chic-titre-2, $color-chic-titre-3);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        margin-left: 320px;
-        margin-right: 320px;
         padding-top: 120px;
         padding-bottom: 60px;
     }
@@ -665,6 +663,135 @@ li {
         &--prix {
             font-size: 28px;
             font-weight: bold;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .main {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resto_chic, .resto_palette {
+        margin-top: 78px;
+    }
+
+    .menu-note, .menu-chic, .menu-delice, .menu-palette {
+        margin-left: 26px;
+        margin-right: 26px;
+    }
+
+    .menu-note, .menu-delice, .menu-palette {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .liste-note {
+        &__header {
+            &--gauche {
+                width: 280px;
+                height: 36px;
+            }
+            &--droit {
+                width: 280px;
+                height: 36px;
+            }
+        }
+    }
+
+    .liste-chic {
+        &__header {
+            &--gauche {
+                height: 26px;
+                width: 300px;
+                margin: auto;
+            }
+            &--droite {
+                height: 26px;
+                width: 300px;
+                margin: auto;
+            }
+        }
+        &__liste {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+
+    .liste-delice {
+        &__header {
+            &--gauche {
+                width: 290px;
+                height: 36px;
+            }
+            &--droit {
+                width: 290px;
+                height: 36px;
+            }
+        }
+        &__liste {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+
+    .liste-palette {
+        &__header {
+            &--droit {
+                width: 300px;
+                height: 40px;
+            }
+            &--gauche {
+                width: 300px;
+                height: 40px;
+            }
+        }
+        &__liste {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    .menu-note, .menu-chic, .menu-delice, .menu-palette {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .menu-note, .menu-delice, .menu-palette {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .liste-note {
+        &__header {
+            &--gauche {
+                width: 220px;
+                height: 18px;
+                margin: auto;
+            }
+            &--titre {
+                font-size: 22px;
+            }
+            &--droit {
+                width: 220px;
+                height: 18px;
+                margin: auto;
+            }
+        }
+        &__mets {
+            &--plat {
+                font-size: 24px;
+            }
+            &--prix {
+                font-size: 26px;
+            }
         }
     }
 }
