@@ -527,54 +527,57 @@ li {
 }
 
 .liste-delice {
-    &__titre {
-        font-size: 30px;
-        color: $color-delice-txt;
-        text-align: center;
-        margin-left: 400px;
-        margin-right: 400px;
-        margin-bottom: 30px;
-        transition: all 0.2s ease-in-out;
-        position: relative;
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -6px;
-          width: 0px;
-          height: 5px;
-          margin: 5px 0 0;
-          transition: all 0.1s ease-in-out;
-          transition-duration: 0.75s;
-          opacity: 0;
-          left: 0;
-        }
-        &.first-delice {
+    &__header {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        &--titre {
+            font-size: 30px;
+            color: $color-delice-txt;
+            text-align: center;
+            transition: all 0.2s ease-in-out;
+            position: relative;
             &:before,
             &:after {
-                background-color: $color-delice-1;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            width: 0px;
+            height: 5px;
+            margin: 5px 0 0;
+            transition: all 0.1s ease-in-out;
+            transition-duration: 0.75s;
+            opacity: 0;
+            left: 0;
             }
-        }
-        &.second-delice {
-            &:before,
-            &:after {
-                background-color: $color-delice-2;
-            }
-        }
-        &.third-delice {
-            &:before,
-            &:after {
-                background-color: $color-delice-3;
-            }
-        }
-            &:hover {
-                cursor: pointer;
+            &.first-delice {
                 &:before,
                 &:after {
-                width: 100%;
-                opacity: 1;
+                    background-color: $color-delice-1;
                 }
             }
+            &.second-delice {
+                &:before,
+                &:after {
+                    background-color: $color-delice-2;
+                }
+            }
+            &.third-delice {
+                &:before,
+                &:after {
+                    background-color: $color-delice-3;
+                }
+            }
+                &:hover {
+                    cursor: pointer;
+                    &:before,
+                    &:after {
+                    width: 100%;
+                    opacity: 1;
+                    }
+                }
+        }
     }
     &__liste {
         padding-left: 160px;
