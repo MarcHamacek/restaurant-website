@@ -87,6 +87,10 @@ header {
   padding: 24px;
 }
 
+.ohmyfood-logo {
+  height: 70px;
+}
+
 /*Body*/
 .container {
   width: 100%;
@@ -630,16 +634,26 @@ li {
     margin-top: 78px;
   }
 
-  .menu-note, .menu-chic, .menu-delice, .menu-palette {
+  .menu-chic, .menu-delice, .menu-palette {
     margin-left: 26px;
     margin-right: 26px;
   }
 
-  .menu-note, .menu-delice, .menu-palette {
+  .menu-delice, .menu-palette {
     padding-left: 50px;
     padding-right: 50px;
   }
 
+  .menu-note {
+    margin-left: 26px;
+    margin-right: 26px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .liste-note__header {
+    margin-top: 70px;
+  }
   .liste-note__header--gauche {
     width: 280px;
     height: 36px;
@@ -719,6 +733,134 @@ li {
   }
   .liste-note__mets--prix {
     font-size: 26px;
+  }
+}
+@media all and (max-width: 600px) {
+  .ohmyfood-logo {
+    height: 50px;
+  }
+
+  .row, .resto_chic, .resto_palette {
+    margin-top: 50px;
+  }
+
+  .resto {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 90%;
+    height: 500px;
+  }
+
+  .prochainement {
+    margin: 50px auto;
+  }
+  .prochainement__btn {
+    font-size: 22px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+  .footer__mentions {
+    margin-left: 10px;
+  }
+  .footer__contact {
+    margin-right: 10px;
+  }
+}
+.titre_resto {
+  font-size: 46px;
+}
+
+.liste-note__header {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.liste-note__header--gauche {
+  height: 0;
+  width: 0;
+}
+.liste-note__header--droit {
+  height: 0;
+  width: 0;
+}
+.liste-note__mets--plat {
+  font-size: 20px;
+}
+.liste-note__mets--prix {
+  font-size: 22px;
+}
+
+.footer-note__logo {
+  height: 50px;
+}
+.footer-note__titre {
+  font-size: 40px;
+}
+
+@media all and (max-width: 400px) {
+  .ohmyfood-logo {
+    height: 40px;
+  }
+
+  .resto {
+    height: 450px;
+  }
+
+  .menu {
+    font-size: 30px;
+  }
+
+  .prochainement__btn {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .titre_resto {
+    font-size: 32px;
+    margin-top: 40px;
+  }
+
+  .menu-note, .menu-chic, .menu-delice, .menu-palette {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .header-note__titre {
+    font-size: 40px;
+  }
+
+  .liste-note__header {
+    margin: 30px auto;
+  }
+  .liste-note__header--gauche {
+    width: 0px;
+    height: 0px;
+  }
+  .liste-note__header--droit {
+    width: 0px;
+    height: 0px;
+  }
+  .liste-note__mets--plat {
+    font-size: 16px;
+  }
+  .liste-note__mets--prix {
+    font-size: 18px;
+  }
+
+  .footer-note__logo {
+    height: 30px;
+  }
+  .footer-note__titre {
+    font-size: 30px;
+    margin-top: 50px;
+    padding-bottom: 50px;
   }
 }
 

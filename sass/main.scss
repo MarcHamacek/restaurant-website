@@ -74,6 +74,10 @@ header {
     }
 }
 
+.ohmyfood-logo {
+    height: 70px;
+}
+
 /*Body*/
 
 .container {
@@ -681,18 +685,28 @@ li {
         margin-top: 78px;
     }
 
-    .menu-note, .menu-chic, .menu-delice, .menu-palette {
+    .menu-chic, .menu-delice, .menu-palette {
         margin-left: 26px;
         margin-right: 26px;
     }
 
-    .menu-note, .menu-delice, .menu-palette {
+    .menu-delice, .menu-palette {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    //Note enchantée
+
+    .menu-note {
+        margin-left: 26px;
+        margin-right: 26px;
         padding-left: 50px;
         padding-right: 50px;
     }
 
     .liste-note {
         &__header {
+            margin-top: 70px;
             &--gauche {
                 width: 280px;
                 height: 36px;
@@ -703,6 +717,8 @@ li {
             }
         }
     }
+
+    //Chic
 
     .liste-chic {
         &__header {
@@ -723,6 +739,8 @@ li {
         }
     }
 
+    //Délice
+
     .liste-delice {
         &__header {
             &--gauche {
@@ -739,6 +757,8 @@ li {
             padding-right: 120px;
         }
     }
+
+    //Palette
 
     .liste-palette {
         &__header {
@@ -769,6 +789,8 @@ li {
         padding-right: 30px;
     }
 
+    //Note enchantée
+
     .liste-note {
         &__header {
             &--gauche {
@@ -792,6 +814,159 @@ li {
             &--prix {
                 font-size: 26px;
             }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    .ohmyfood-logo {
+        height: 50px;
+    }
+
+    .row, .resto_chic, .resto_palette {
+        margin-top: 50px;
+    }
+
+    .resto {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 90%;
+        height: 500px;
+    }
+    
+    .prochainement {
+        margin: 50px auto;
+        &__btn {
+            font-size: 22px;    
+        }
+    }
+
+    .footer {
+        font-size: 16px;
+        &__mentions {
+            margin-left: 10px;
+        }
+        &__contact {
+            margin-right: 10px;
+        }
+    }
+}
+
+    //Menu général
+
+    .titre_resto {
+        font-size: 46px;
+    }
+
+    //Note enchantée
+
+    .liste-note {
+        &__header {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            &--gauche {
+                height: 0;
+                width: 0;
+            }
+            &--droit {
+                height: 0;
+                width: 0;
+            }
+        }
+        &__mets {
+            &--plat {
+                font-size: 20px;
+            }
+            &--prix {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .footer-note {
+        &__logo {
+            height: 50px;
+        }
+        &__titre {
+            font-size: 40px
+        }
+    }
+
+
+
+@media all and (max-width: 400px) {
+    .ohmyfood-logo {
+        height: 40px;
+    }
+
+    .resto {
+        height: 450px;
+    }
+
+    .menu {
+        font-size: 30px;
+    }
+
+    .prochainement__btn {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .titre_resto {
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    .menu-note, .menu-chic, .menu-delice, .menu-palette {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    //Note enchantée
+
+    .header-note {
+        &__titre {
+            font-size: 40px;
+        }
+    }
+
+    .liste-note {
+        &__header {
+            margin: 30px auto;
+            &--gauche {
+                width: 0px;
+                height: 0px;
+            }
+            &--droit {
+                width: 0px;
+                height: 0px;
+            }
+        }
+        &__mets {
+            &--plat {
+                font-size: 16px;
+            }
+            &--prix {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .footer-note {
+        &__logo {
+            height: 30px;
+        }
+        &__titre {
+            font-size: 30px;
+            margin-top: 50px;
+            padding-bottom: 50px;
         }
     }
 }
