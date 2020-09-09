@@ -302,6 +302,19 @@ a {
 
 /*------------------------------------------------------------------------------------------*/
 
+//Mention Légales
+
+.mentions-legales {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.lorem-ipsum {
+    text-align: justify;
+    font-size: 26px;
+}
+
+
 .titre_resto {
     font-size: 60px;
     font-weight: bold;
@@ -685,35 +698,40 @@ li {
         margin-top: 78px;
     }
 
-    .menu-chic, .menu-delice, .menu-palette {
+    .menu-note, .menu-chic, .menu-delice, .menu-palette, .lorem-ipsum {
         margin-left: 26px;
         margin-right: 26px;
     }
 
-    .menu-delice, .menu-palette {
-        padding-left: 50px;
-        padding-right: 50px;
+    //Mentions légales
+
+    .mentions-legales {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     //Note enchantée
 
     .menu-note {
-        margin-left: 26px;
-        margin-right: 26px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .liste-note {
         &__header {
             margin-top: 70px;
+            &--titre {
+                font-size: 30px;
+            }
             &--gauche {
-                width: 280px;
-                height: 36px;
+                width: 220px;
+                height: 24px;
+                margin: auto 0;
             }
             &--droit {
-                width: 280px;
-                height: 36px;
+                width: 220px;
+                height: 24px;
+                margin: auto 0;
             }
         }
     }
@@ -723,14 +741,17 @@ li {
     .liste-chic {
         &__header {
             &--gauche {
-                height: 26px;
-                width: 300px;
-                margin: auto;
+                height: 20px;
+                width: 220px;
+                margin: auto 0;
             }
             &--droite {
-                height: 26px;
-                width: 300px;
-                margin: auto;
+                height: 20px;
+                width: 220px;
+                margin: auto 0;
+            }
+            &--titre {
+                font-size: 30px;
             }
         }
         &__liste {
@@ -741,52 +762,92 @@ li {
 
     //Délice
 
+    .menu-delice {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .header-delice {
+        &__titre {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+
     .liste-delice {
         &__header {
+            margin: 50px auto;
             &--gauche {
-                width: 290px;
-                height: 36px;
+                width: 230px;
+                height: 20px;
+                margin: auto 0;
             }
             &--droit {
-                width: 290px;
-                height: 36px;
+                width: 230px;
+                height: 20px;
+                margin: auto 0;
             }
         }
         &__liste {
-            padding-left: 120px;
-            padding-right: 120px;
+            padding-left: 50px;
+            padding-right: 50px;
         }
     }
 
     //Palette
 
+    .menu-palette {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-palette {
+        &__titre {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
     .liste-palette {
         &__header {
+            margin: 50px auto;
             &--droit {
-                width: 300px;
-                height: 40px;
+                width: 220px;
+                height: 22px;
+                margin: auto 0;
             }
             &--gauche {
-                width: 300px;
-                height: 40px;
+                width: 220px;
+                height: 22px;
+                margin: auto 0;
             }
         }
         &__liste {
-            padding-left: 60px;
-            padding-right: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }
 
 @media all and (max-width: 800px) {
-    .menu-note, .menu-chic, .menu-delice, .menu-palette {
-        margin-left: 18px;
-        margin-right: 18px;
+
+    .ohmyfood-logo {
+        height: 50px;
     }
 
-    .menu-note, .menu-delice, .menu-palette {
+    .menu-note, .menu-chic, .menu-delice, .menu-palette {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .menu-note, .menu-chic,.menu-delice, .menu-palette {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    .footer {
+        font-size: 20px;
     }
 
     //Note enchantée
@@ -796,7 +857,7 @@ li {
             &--gauche {
                 width: 220px;
                 height: 18px;
-                margin: auto;
+                margin: auto 0;
             }
             &--titre {
                 font-size: 22px;
@@ -804,7 +865,7 @@ li {
             &--droit {
                 width: 220px;
                 height: 18px;
-                margin: auto;
+                margin: auto 0;
             }
         }
         &__mets {
@@ -813,6 +874,108 @@ li {
             }
             &--prix {
                 font-size: 26px;
+            }
+        }
+    }
+
+    //Chic
+
+    .header-chic {
+        &__titre {
+            padding-top: 80px;
+        }
+    }
+
+    .liste-chic {
+        &__header {
+            &--titre {
+                font-size: 24px;
+            }
+            &--gauche {
+                width: 170px;
+                height: 14px;
+            }
+            &--droite {
+                width: 170px;
+                height: 14px;
+            }
+        }
+        &__liste {
+            padding-left: 40px;
+            padding-right: 40px;
+            &--plat {
+                font-size: 20px;
+            }
+            &--prix {
+                font-size: 22px;
+            }
+        }
+    }
+
+    //Délice
+
+    .header-delice {
+        &__titre {
+            font-size: 64px;
+        }
+    }
+
+    .liste-delice {
+        &__header {
+            &--titre {
+                font-size: 26px;
+            }
+            &--gauche {
+                width: 180px;
+                height: 12px;
+            }
+            &--droit {
+                width: 180px;
+                height: 12px;
+            }
+        }
+        &__liste {
+            padding-left: 30px;
+            padding-right: 30px;
+            &--plat {
+                font-size: 20px;
+            }
+            &--prix {
+                font-size: 22px;
+            }
+        }
+    }
+
+    //Palette
+
+    .header-palette {
+        &__titre {
+            font-size: 64px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    .liste-palette {
+        &__header {
+            &--titre {
+                font-size: 26px;
+            }
+            &--gauche {
+                width: 170px;
+                height: 16px;
+            }
+            &--droit {
+                width: 170px;
+                height: 16px;
+            }
+        }
+        &__liste {
+            &--plat {
+                font-size: 18px;
+            }
+            &--prix {
+                font-size: 20px;
             }
         }
     }
@@ -851,12 +1014,24 @@ li {
             margin-right: 10px;
         }
     }
-}
 
+    //Mentions
+    
+    .lorem-ipsum {
+        font-size: 24px;
+    }
+    
     //Menu général
 
     .titre_resto {
-        font-size: 46px;
+        font-size: 40px;
+    }
+
+    .menu-note, .menu-chic,.menu-delice, .menu-palette {
+        margin-left: 6px;
+        margin-right: 6px;
+        padding-left: 6px;
+        padding-right: 6px;
     }
 
     //Note enchantée
@@ -865,21 +1040,24 @@ li {
         &__header {
             margin-top: 50px;
             margin-bottom: 30px;
+            &--titre {
+                font-size: 16px;
+            }
             &--gauche {
-                height: 0;
-                width: 0;
+                height: 10px;
+                width: 120px;
             }
             &--droit {
-                height: 0;
-                width: 0;
+                height: 10px;
+                width: 120px;
             }
         }
         &__mets {
             &--plat {
-                font-size: 20px;
+                font-size: 16px;
             }
             &--prix {
-                font-size: 22px;
+                font-size: 18px;
             }
         }
     }
@@ -893,7 +1071,103 @@ li {
         }
     }
 
+    //Chic
 
+    .header-chic {
+        &__titre {
+            font-size: 40px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .liste-chic {
+        &__header {
+            margin: 30px auto;
+            &--titre {
+                font-size: 22px;
+            }
+            &--gauche {
+                width: 100px;
+                height: 6px;
+            }
+            &--droite {
+                width: 100px;
+                height: 6px;
+            }
+        }
+        &__liste {
+            padding-left: 10px;
+            padding-right: 10px;
+            &--plat {
+                font-size: 18px;
+            }
+            &--prix {
+                font-size: 20px;
+            }
+        }
+    }
+
+    //Délice
+
+    .header-delice {
+        &__titre {
+            font-size: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    .liste-delice {
+        &__header {
+            margin: 40px auto;
+            &--titre {
+                font-size: 24px;
+            }
+            &--gauche {
+                width: 100px;
+                height: 6px;
+            }
+            &--droit {
+                width: 100px;
+                height: 6px;
+            }
+        }
+        &__liste {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    //Palette
+
+    .header-palette {
+        &__titre {
+            font-size: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .liste-palette {
+        &__header {
+            &--titre {
+                font-size: 24px;
+            }
+            &--gauche {
+                width: 120px;
+                height: 8px;
+            }
+            &--droit {
+                width: 120px;
+                height: 8px;
+            }
+        }
+        &__liste {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
 
 @media all and (max-width: 400px) {
     .ohmyfood-logo {
@@ -922,11 +1196,10 @@ li {
         margin-top: 40px;
     }
 
-    .menu-note, .menu-chic, .menu-delice, .menu-palette {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 8px;
-        padding-right: 8px;
+    //Mentions
+
+    .lorem-ipsum {
+        font-size: 20px;
     }
 
     //Note enchantée
@@ -941,12 +1214,12 @@ li {
         &__header {
             margin: 30px auto;
             &--gauche {
-                width: 0px;
-                height: 0px;
+                width: 70px;
+                height: 4px;
             }
             &--droit {
-                width: 0px;
-                height: 0px;
+                width: 70px;
+                height: 4px;
             }
         }
         &__mets {
@@ -967,6 +1240,95 @@ li {
             font-size: 30px;
             margin-top: 50px;
             padding-bottom: 50px;
+        }
+    }
+
+    //Chic
+
+    .liste-chic {
+        &__header {
+            margin: 20px auto;
+            &--titre {
+                font-size: 20px;
+            }
+            &--gauche {
+                width: 70px;
+                height: 4px;
+            }
+            &--droite {
+                width: 70px;
+                height: 4px;
+            }
+        }
+    }
+
+    //Délice
+
+    .header-delice {
+        &__titre {
+            font-size: 34px;
+            padding-top: 40px;
+            padding-bottom: 18px;
+        }
+    }
+
+    .liste-delice {
+        &__header {
+            margin: 30px auto;
+            &--titre {
+                font-size: 20px;
+            }
+            &--droit {
+                width: 70px;
+                height: 4px;
+            }
+            &--gauche {
+                width: 70px;
+                height: 4px;
+            }
+        }
+        &__liste {
+            &--plat {
+                font-size: 18px;
+            }
+            &--prix {
+                font-size: 20px;
+            }
+        }
+    }
+
+    //Palette
+
+    .header-palette {
+        &__titre {
+            font-size: 34px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .liste-palette {
+        &__header {
+            margin: 30px auto;
+            &--titre {
+                font-size: 20px;
+            }
+            &--gauche {
+                width: 50px;
+                height: 4px;
+            }
+            &--droit {
+                width: 50px;
+                height: 4px;
+            }
+        }
+        &__liste {
+            &--plat {
+                font-size: 16px;
+            }
+            &--prix {
+                font-size: 18px;
+            }
         }
     }
 }

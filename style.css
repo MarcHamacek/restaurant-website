@@ -295,6 +295,16 @@ a:visited {
   }
 }
 /*------------------------------------------------------------------------------------------*/
+.mentions-legales {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.lorem-ipsum {
+  text-align: justify;
+  font-size: 26px;
+}
+
 .titre_resto {
   font-size: 60px;
   font-weight: bold;
@@ -634,91 +644,136 @@ li {
     margin-top: 78px;
   }
 
-  .menu-chic, .menu-delice, .menu-palette {
+  .menu-note, .menu-chic, .menu-delice, .menu-palette, .lorem-ipsum {
     margin-left: 26px;
     margin-right: 26px;
   }
 
-  .menu-delice, .menu-palette {
-    padding-left: 50px;
-    padding-right: 50px;
+  .mentions-legales {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .menu-note {
-    margin-left: 26px;
-    margin-right: 26px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .liste-note__header {
     margin-top: 70px;
   }
+  .liste-note__header--titre {
+    font-size: 30px;
+  }
   .liste-note__header--gauche {
-    width: 280px;
-    height: 36px;
+    width: 220px;
+    height: 24px;
+    margin: auto 0;
   }
   .liste-note__header--droit {
-    width: 280px;
-    height: 36px;
+    width: 220px;
+    height: 24px;
+    margin: auto 0;
   }
 
   .liste-chic__header--gauche {
-    height: 26px;
-    width: 300px;
-    margin: auto;
+    height: 20px;
+    width: 220px;
+    margin: auto 0;
   }
   .liste-chic__header--droite {
-    height: 26px;
-    width: 300px;
-    margin: auto;
+    height: 20px;
+    width: 220px;
+    margin: auto 0;
+  }
+  .liste-chic__header--titre {
+    font-size: 30px;
   }
   .liste-chic__liste {
     padding-left: 120px;
     padding-right: 120px;
   }
 
-  .liste-delice__header--gauche {
-    width: 290px;
-    height: 36px;
-  }
-  .liste-delice__header--droit {
-    width: 290px;
-    height: 36px;
-  }
-  .liste-delice__liste {
-    padding-left: 120px;
-    padding-right: 120px;
+  .menu-delice {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
   }
 
+  .header-delice__titre {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .liste-delice__header {
+    margin: 50px auto;
+  }
+  .liste-delice__header--gauche {
+    width: 230px;
+    height: 20px;
+    margin: auto 0;
+  }
+  .liste-delice__header--droit {
+    width: 230px;
+    height: 20px;
+    margin: auto 0;
+  }
+  .liste-delice__liste {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .menu-palette {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header-palette__titre {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .liste-palette__header {
+    margin: 50px auto;
+  }
   .liste-palette__header--droit {
-    width: 300px;
-    height: 40px;
+    width: 220px;
+    height: 22px;
+    margin: auto 0;
   }
   .liste-palette__header--gauche {
-    width: 300px;
-    height: 40px;
+    width: 220px;
+    height: 22px;
+    margin: auto 0;
   }
   .liste-palette__liste {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media all and (max-width: 800px) {
-  .menu-note, .menu-chic, .menu-delice, .menu-palette {
-    margin-left: 18px;
-    margin-right: 18px;
+  .ohmyfood-logo {
+    height: 50px;
   }
 
-  .menu-note, .menu-delice, .menu-palette {
+  .menu-note, .menu-chic, .menu-delice, .menu-palette {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .menu-note, .menu-chic, .menu-delice, .menu-palette {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .footer {
+    font-size: 20px;
   }
 
   .liste-note__header--gauche {
     width: 220px;
     height: 18px;
-    margin: auto;
+    margin: auto 0;
   }
   .liste-note__header--titre {
     font-size: 22px;
@@ -726,13 +781,89 @@ li {
   .liste-note__header--droit {
     width: 220px;
     height: 18px;
-    margin: auto;
+    margin: auto 0;
   }
   .liste-note__mets--plat {
     font-size: 24px;
   }
   .liste-note__mets--prix {
     font-size: 26px;
+  }
+
+  .header-chic__titre {
+    padding-top: 80px;
+  }
+
+  .liste-chic__header--titre {
+    font-size: 24px;
+  }
+  .liste-chic__header--gauche {
+    width: 170px;
+    height: 14px;
+  }
+  .liste-chic__header--droite {
+    width: 170px;
+    height: 14px;
+  }
+  .liste-chic__liste {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .liste-chic__liste--plat {
+    font-size: 20px;
+  }
+  .liste-chic__liste--prix {
+    font-size: 22px;
+  }
+
+  .header-delice__titre {
+    font-size: 64px;
+  }
+
+  .liste-delice__header--titre {
+    font-size: 26px;
+  }
+  .liste-delice__header--gauche {
+    width: 180px;
+    height: 12px;
+  }
+  .liste-delice__header--droit {
+    width: 180px;
+    height: 12px;
+  }
+  .liste-delice__liste {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .liste-delice__liste--plat {
+    font-size: 20px;
+  }
+  .liste-delice__liste--prix {
+    font-size: 22px;
+  }
+
+  .header-palette__titre {
+    font-size: 64px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .liste-palette__header--titre {
+    font-size: 26px;
+  }
+  .liste-palette__header--gauche {
+    width: 170px;
+    height: 16px;
+  }
+  .liste-palette__header--droit {
+    width: 170px;
+    height: 16px;
+  }
+  .liste-palette__liste--plat {
+    font-size: 18px;
+  }
+  .liste-palette__liste--prix {
+    font-size: 20px;
   }
 }
 @media all and (max-width: 600px) {
@@ -767,37 +898,129 @@ li {
   .footer__contact {
     margin-right: 10px;
   }
-}
-.titre_resto {
-  font-size: 46px;
-}
 
-.liste-note__header {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-.liste-note__header--gauche {
-  height: 0;
-  width: 0;
-}
-.liste-note__header--droit {
-  height: 0;
-  width: 0;
-}
-.liste-note__mets--plat {
-  font-size: 20px;
-}
-.liste-note__mets--prix {
-  font-size: 22px;
-}
+  .lorem-ipsum {
+    font-size: 24px;
+  }
 
-.footer-note__logo {
-  height: 50px;
-}
-.footer-note__titre {
-  font-size: 40px;
-}
+  .titre_resto {
+    font-size: 40px;
+  }
 
+  .menu-note, .menu-chic, .menu-delice, .menu-palette {
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .liste-note__header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .liste-note__header--titre {
+    font-size: 16px;
+  }
+  .liste-note__header--gauche {
+    height: 10px;
+    width: 120px;
+  }
+  .liste-note__header--droit {
+    height: 10px;
+    width: 120px;
+  }
+  .liste-note__mets--plat {
+    font-size: 16px;
+  }
+  .liste-note__mets--prix {
+    font-size: 18px;
+  }
+
+  .footer-note__logo {
+    height: 50px;
+  }
+  .footer-note__titre {
+    font-size: 40px;
+  }
+
+  .header-chic__titre {
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .liste-chic__header {
+    margin: 30px auto;
+  }
+  .liste-chic__header--titre {
+    font-size: 22px;
+  }
+  .liste-chic__header--gauche {
+    width: 100px;
+    height: 6px;
+  }
+  .liste-chic__header--droite {
+    width: 100px;
+    height: 6px;
+  }
+  .liste-chic__liste {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .liste-chic__liste--plat {
+    font-size: 18px;
+  }
+  .liste-chic__liste--prix {
+    font-size: 20px;
+  }
+
+  .header-delice__titre {
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .liste-delice__header {
+    margin: 40px auto;
+  }
+  .liste-delice__header--titre {
+    font-size: 24px;
+  }
+  .liste-delice__header--gauche {
+    width: 100px;
+    height: 6px;
+  }
+  .liste-delice__header--droit {
+    width: 100px;
+    height: 6px;
+  }
+  .liste-delice__liste {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header-palette__titre {
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .liste-palette__header--titre {
+    font-size: 24px;
+  }
+  .liste-palette__header--gauche {
+    width: 120px;
+    height: 8px;
+  }
+  .liste-palette__header--droit {
+    width: 120px;
+    height: 8px;
+  }
+  .liste-palette__liste {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 @media all and (max-width: 400px) {
   .ohmyfood-logo {
     height: 40px;
@@ -825,11 +1048,8 @@ li {
     margin-top: 40px;
   }
 
-  .menu-note, .menu-chic, .menu-delice, .menu-palette {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
+  .lorem-ipsum {
+    font-size: 20px;
   }
 
   .header-note__titre {
@@ -840,12 +1060,12 @@ li {
     margin: 30px auto;
   }
   .liste-note__header--gauche {
-    width: 0px;
-    height: 0px;
+    width: 70px;
+    height: 4px;
   }
   .liste-note__header--droit {
-    width: 0px;
-    height: 0px;
+    width: 70px;
+    height: 4px;
   }
   .liste-note__mets--plat {
     font-size: 16px;
@@ -861,6 +1081,75 @@ li {
     font-size: 30px;
     margin-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .liste-chic__header {
+    margin: 20px auto;
+  }
+  .liste-chic__header--titre {
+    font-size: 20px;
+  }
+  .liste-chic__header--gauche {
+    width: 70px;
+    height: 4px;
+  }
+  .liste-chic__header--droite {
+    width: 70px;
+    height: 4px;
+  }
+
+  .header-delice__titre {
+    font-size: 34px;
+    padding-top: 40px;
+    padding-bottom: 18px;
+  }
+
+  .liste-delice__header {
+    margin: 30px auto;
+  }
+  .liste-delice__header--titre {
+    font-size: 20px;
+  }
+  .liste-delice__header--droit {
+    width: 70px;
+    height: 4px;
+  }
+  .liste-delice__header--gauche {
+    width: 70px;
+    height: 4px;
+  }
+  .liste-delice__liste--plat {
+    font-size: 18px;
+  }
+  .liste-delice__liste--prix {
+    font-size: 20px;
+  }
+
+  .header-palette__titre {
+    font-size: 34px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .liste-palette__header {
+    margin: 30px auto;
+  }
+  .liste-palette__header--titre {
+    font-size: 20px;
+  }
+  .liste-palette__header--gauche {
+    width: 50px;
+    height: 4px;
+  }
+  .liste-palette__header--droit {
+    width: 50px;
+    height: 4px;
+  }
+  .liste-palette__liste--plat {
+    font-size: 16px;
+  }
+  .liste-palette__liste--prix {
+    font-size: 18px;
   }
 }
 
