@@ -87,6 +87,7 @@ header {
 .main {
     width: 1170px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 a {
@@ -201,7 +202,9 @@ a {
 .prochainement {
     display: flex;
     justify-content: center;
-    margin: 78px auto;
+    margin-top: 78px;
+    margin-bottom: 28px;
+    padding-bottom: 50px;
     &__btn {
         font-family: 'Montserrat', serif, sans-serif;
         font-size: 30px;
@@ -307,11 +310,16 @@ a {
 .mentions-legales {
     padding-top: 50px;
     padding-bottom: 50px;
+
 }
 
 .lorem-ipsum {
     text-align: justify;
-    font-size: 26px;
+    font-size: 22px;
+    line-height: 140%;
+    padding-bottom: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 
@@ -372,7 +380,7 @@ li {
               position: absolute;
               bottom: -6px;
               width: 0px;
-              height: 5px;
+              height: 3px;
               margin: 5px 0 0;
               transition: all 0.2s ease-in-out;
               transition-duration: 0.75s;
@@ -458,7 +466,7 @@ li {
             position: absolute;
             bottom: -6px;
             width: 0px;
-            height: 5px;
+            height: 3px;
             margin: 5px 0 0;
             transition: all 0.1s ease-in-out;
             transition-duration: 0.75s;
@@ -560,7 +568,7 @@ li {
             position: absolute;
             bottom: -6px;
             width: 0px;
-            height: 5px;
+            height: 3px;
             margin: 5px 0 0;
             transition: all 0.1s ease-in-out;
             transition-duration: 0.75s;
@@ -652,7 +660,7 @@ li {
                 position: absolute;
                 bottom: -6px;
                 width: 0px;
-                height: 5px;
+                height: 3px;
                 margin: 5px 0 0;
                 transition: all 0.1s ease-in-out;
                 transition-duration: 0.75s;
@@ -987,6 +995,10 @@ li {
         height: 50px;
     }
 
+    .main {
+        padding-bottom: 24px;
+    }
+
     .row, .resto_chic, .resto_palette {
         margin-top: 50px;
     }
@@ -999,7 +1011,9 @@ li {
     }
     
     .prochainement {
-        margin: 50px auto;
+        margin-top: 50px;
+        margin-bottom: 28px;
+        padding-bottom: 16px;
         &__btn {
             font-size: 22px;    
         }
@@ -1032,6 +1046,7 @@ li {
         margin-right: 6px;
         padding-left: 6px;
         padding-right: 6px;
+        padding-bottom: 30px;
     }
 
     //Note enchantée
